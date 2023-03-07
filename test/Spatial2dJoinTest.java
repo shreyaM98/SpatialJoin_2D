@@ -1,7 +1,7 @@
 import org.junit.Test;
 
 
-public class SpatialJoinTest {
+public class Spatial2dJoinTest {
 
     @Test
     public void debug() throws Exception {
@@ -13,7 +13,7 @@ public class SpatialJoinTest {
         input[1] = "file:///pathto/Rectangle.txt";
         input[2] = "file:///pathto/output";
 
-        SpatialJoin spatialJoin = new SpatialJoin();
-        spatialJoin.main(input);
+        Spatial2dJoin spatial2dJoin = new Spatial2dJoin();
+        spatial2dJoin.main(input);
     }
 }

@@ -14,7 +14,7 @@ import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class SpatialJoin {
+public class Spatial2dJoin {
 
     public static List<String> divideIntoBlocks(Integer maxPoint, Integer blockSize) {
         List<String> blocks = new ArrayList<>();
