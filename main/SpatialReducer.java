@@ -39,13 +39,18 @@ public class SpatialReducer {
                 }
             }
             for(Point point:pointList){
+                Set<String> overlappingRectangleIds = new HashSet<>();
                 for(Rectangle rectangle:rectangleList){
                     if(rectangle.contains(point)){
-                        String resultVal = point.toString();
-                        context.write(new Text(rectangle.getId()), new Text(resultVal));
+                        overlappingRectangleIds.add(rectangle.getId());
                     }
                 }
+                for(String overlappingRectangleId : overlappingRectangleIds) {
+                    String resultVal = point.toString();
+                    context.write(new Text(overlappingRectangleId), new Text(resultVal));
+                }
             }
+        }
         }
 
     /**
